@@ -590,3 +590,20 @@ def logout():
         session['user'] = None
         flash("Successfully Logged Out!", "success")
     return redirect(url_for('main'))
+
+
+@app.route("/healthcare_consultancy")
+def healthcare_consultancy():
+    return render_template("healthcare_consultancy.html")
+
+@app.route("/inventory_management")
+def inventory_management():
+    return render_template("inventory_management .html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/team")
+def team():
+    return render_template("team.html")

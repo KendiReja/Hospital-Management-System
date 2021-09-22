@@ -6,6 +6,7 @@ from wtforms.fields.html5 import DateField, widgets
 from .Models import UserStore, Patient_test, Patient_Medicine, Patient_details, Diagnosis, Medicine
 import re
 
+
 class check_alpha(FlaskForm):
     def __init__(self, message):
         if not message:

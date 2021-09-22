@@ -7,6 +7,7 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>{{ title }}</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
@@ -35,7 +36,7 @@
             class="navbar-brand"
             href="#"
             style="font-family: Oswald, sans-serif;"
-            >ABC Hospital Management System</a
+            >REJA'S Hospital Management System</a
           ><button
             data-toggle="collapse"
             class="navbar-toggler"
@@ -155,7 +156,7 @@
       <!--Flash message end-->
       {% if pid %}
       <br/>
-      <h5 class="text-center" style="color: var(--darkless);">Current Patient ID: {{pid}}</h5>
+      <h5 class="text-center" style="color: var(--dark);">Current Patient ID: {{pid}}</h5>
       {% endif %}
       {% block content %}
       <!-- Block Content goes here -->
@@ -168,17 +169,18 @@
             <div class="col-sm-4 col-md-3 item">
               <h3>Services</h3>
               <ul>
-                <li>Hospital Management System</li>
-                <li><a href="#">Inventory Management System</a></li>
-                <li><a href="#">Business Consultancy</a></li>
+<!--                <li>Hospital Management System</li>-->
+                <li><a href="/inventory_management">Inventory Management System</a></li>
+                <li><a href="/healthcare_consultancy">Healthcare Consultancy</a></li>
+<!--                <li><a href="#">Business Consultancy</a></li>-->
               </ul>
             </div>
             <div class="col-sm-4 col-md-3 item">
               <h3>About</h3>
               <ul>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Legacy</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/team">Team</a></li>
+<!--                <li><a href="#">Legacy</a></li>-->
               </ul>
             </div>
             <div
@@ -186,19 +188,16 @@
               style="padding-top: 0px; padding-bottom: 0px;"
             >
               <img
-                src="../static/img/logo.svg"
-                style="
-                  width: 135px;
-                  filter: grayscale(100%) hue-rotate(360deg) invert(100%);
-                "
-              />
+                src="../static/img/newestlogob.jpg"
+<!--                src="../static/img/logo.svg"-->
+<!--                style=" width: 135px; filter: grayscale(100%) hue-rotate(360deg) invert(100%); "-->
             </div>
             <div class="col-lg-3 item social">
-              <a href="#"><i class="icon ion-social-facebook"></i></a
-              ><a href="#"><i class="icon ion-social-twitter"></i></a
-              ><a href="#"><i class="icon ion-social-linkedin"></i></a
-              ><a href="#"><i class="icon ion-email"></i></a>
-              <p class="copyright">ABC Hospital © 2020</p>
+              <a href="https://www.facebook.com/The-Karen-Hospital-130094320369784/"><i class="icon ion-social-facebook"></i></a>
+              <a href="https://twitter.com/_karenhospital"><i class="icon ion-social-twitter"></i></a
+              ><a href="https://ke.linkedin.com/company/the-karen-hospital"><i class="icon ion-social-linkedin"></i></a
+              ><a href="ke"><i class="icon ion-email"></i></a>
+              <p class="copyright">Reja's Hospital © 2021</p>
             </div>
           </div>
         </div>

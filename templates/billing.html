@@ -36,7 +36,7 @@
         <th>Name</th>
         <th>Age</th>
         <th>Address</th>
-        <th>DOJ</th>
+        <th>DOA</th>
         <th>Room Type</th>
       </tr>
       <tr class="warning no-result">
@@ -61,7 +61,7 @@
           📅No. of days: {{ days|string | replace("days, 0:00:00","")  }}
         </td>
         <td colspan="3">
-          🏥Room Charges: {% if charges %}₹{{ (charges * days)|string | replace("days, 0:00:00","") }} {% endif %}
+          🏥Room Charges: {% if charges %}Ksh.{{ (charges * days)|string | replace("days, 0:00:00","") }} {% endif %}
         </td>
       </tr>
       
@@ -94,7 +94,7 @@
     {% endif %}
     <tr style="background-color: var(--darkless);">
       <td colspan="5">
-        💊 Bill for Medicines:  ₹{{mbill}}
+        💊 Bill for Medicines:  KSh.{{mbill}}
       </td>
     </tr>
     </tbody>
@@ -121,14 +121,14 @@
     {% endif %}
     <tr style="background-color: var(--darkless);">
       <td colspan="3">
-        🩺 Bill for Diagnostics: ₹{{tbill}}
+        🩺 Bill for Diagnostics: Ksh.{{tbill}}
       </td>
     </tr>
     </tbody>
   </table>
 
 {% if patient %}
-<h2 class="text-center" style="color: var(--origin); font-weight: bold; width: 350px; border: 2px dashed var(--origin); margin: auto;">Grand Total: ₹{{ tbill + mbill + total|int }}</h2>
+<h2 class="text-center" style="color: var(--origin); font-weight: bold; width: 350px; border: 2px dashed var(--origin); margin: auto;">Grand Total: Ksh.{{ tbill + mbill + total|int }}</h2>
 <div class="text-center" >
   <form class="text-center" method="POST" action="{{url_for('discharge')}}">
       <input name="pid" type="number" hidden value="{{patient[0].id}}"/>

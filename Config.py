@@ -2,6 +2,7 @@ import os
 from flask_sqlalchemy import SQLAlchemy
 from hms import app, Flask
 
+
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or "hospitalMS"
 
